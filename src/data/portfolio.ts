@@ -1,0 +1,112 @@
+export const portfolioData = {
+  meta: {
+    name: "Rutul Patel",
+    title: "Software Engineer",
+    tagline: "Building scalable enterprise solutions with .NET, Azure & microservices",
+    email: "rutulpatel9570@gmail.com",
+    phone: "+91 7567086864",
+    location: "Ahmedabad, Gujarat, India",
+    linkedin: "https://www.linkedin.com/in/rutulapatel",
+  },
+  about:
+    "A passionate software developer with 5 years of experience delivering enterprise-level solutions using .NET Framework, .NET Core, MAUI, and WPF. Skilled in cloud-native platforms like Azure and AWS, with strong expertise in designing microservices, implementing CI/CD pipelines, and leveraging containerization tools such as Docker. Adept at working in agile environments, optimizing performance, and mentoring teams to deliver scalable, high-performing applications.",
+  skills: {
+    "Backend Development": [".NET Core", ".NET 6/7/8", "ASP.NET MVC", "C#", "Web API", "RESTful Services", "WPF", "MAUI", "Entity Framework", "LINQ", "Dapper", "Microservices", "Domain-Driven Design", ".NET Aspire", "Power Automate"],
+    "Frontend Development": ["Angular", "Ionic", "HTML", "CSS", "JavaScript", "TypeScript", "jQuery", "Bootstrap"],
+    "Cloud Technologies": ["Azure App Services", "Azure Functions", "Azure DevOps", "Azure SQL", "Blob Storage", "Key Vault", "AWS EC2", "AWS S3", "AWS Lambda", "AWS RDS", "CloudWatch", "IAM"],
+    "Database Management": ["MS SQL Server", "MySQL", "MongoDB", "Elasticsearch"],
+    "Tools & DevOps": ["Docker", "Git", "SVN", "Jira", "Trello", "Bitbucket", "Postman", "Swagger", "JMeter", "GitHub Actions", "GitLab CI/CD"],
+    "Messaging & Caching": ["Apache Kafka", "RabbitMQ", "Redis Cache", "SQS", "SNS"],
+    Monitoring: ["CloudWatch", "New Relic"],
+    Methodologies: ["Agile", "Scrum", "TDD", "CI/CD"],
+  },
+  experience: [
+    {
+      company: "MagnusMinds IT Solutions",
+      role: "Software Engineer",
+      period: "May 2022 – Present",
+      location: "Ahmedabad",
+      highlights: [
+        "Led migration of large-scale enterprise apps from .NET Framework to .NET Core, achieving 4–5x performance improvements",
+        "Developed and enhanced CRM solutions with real-time notifications, social media connectivity, and payment processing",
+        "Implemented Kafka-based messaging systems for scalable, real-time communication",
+        "Built a Copilot Agent using Power Automate and ChatGPT API for AI-driven customer interaction automation",
+      ],
+    },
+    {
+      company: "Acty System Pvt. Ltd.",
+      role: "Junior Software Engineer",
+      period: "Feb 2020 – Apr 2022",
+      location: "Ahmedabad",
+      highlights: [
+        "Developed and deployed stock-taking system using .NET MVC on handheld devices with Azure DB integration",
+        "Built ERP modules (Purchase, Sales, Inventory, Manufacturing) for Yutaka Robotics System (YRSI)",
+        "Designed project management system with Angular, DevExtreme, .NET Core, and SQL Server",
+        "Implemented DevExpress Reports and integrated QR/Barcode scanning on Windows Compact OS devices",
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Tanyo CRM",
+      subtitle: "Furniture Industry CRM",
+      description: "Multi-tenant cloud CRM integrating iOS/Android apps, admin portal, and Azure backend to streamline furniture business operations — orders, production planning, inventory, and supply chain.",
+      impact: "Improved collaboration between sales & manufacturing teams, automated key workflows, real-time business insights",
+      techStack: ["C#", "ASP.NET Core", "EF Core", "SQL Server", "Angular", "Ionic", "Kafka", "Azure", "WhatsApp API", "OAuth", "GitHub Actions"],
+    },
+    {
+      name: "Koba Library Marketplace",
+      subtitle: "Sanskrit Book Database Platform",
+      description: "Optimized a 2M+ record Sanskrit book marketplace by replacing SQL-based search with Elasticsearch, achieving 10x faster queries with fuzzy and multilingual search support.",
+      impact: "10x improvement in query response times, enhanced usability for 2M+ records with minimal latency",
+      techStack: [".NET Core 8", "Elasticsearch", "MS SQL Server"],
+    },
+    {
+      name: "JMSC POS",
+      subtitle: "Retail Management System",
+      description: "Comprehensive Point of Sale and inventory management system for multi-store retail operations, with employee scheduling, real-time stock-taking via handheld devices, and advanced reporting.",
+      impact: "Streamlined retail workflows, enabled accurate stock control, delivered actionable insights via reporting",
+      techStack: ["C#", ".NET 8", "Web API", "Entity Framework Core", "MySQL", "Crystal Reports", "ActiveX"],
+    },
+    {
+      name: "Tantum Scheduling System",
+      subtitle: "L&T Valves Production Planner",
+      description: "Advanced production scheduling and resource optimization system for L&T Valves using CCR and CCPM-based scheduling engine, handling up to 18,000 order bookings.",
+      impact: "Doubled production efficiency, improved resource utilization across departments",
+      techStack: [".NET Core 8", "MS SQL Server", "Azure"],
+    },
+    {
+      name: "YRSI ERP",
+      subtitle: "Indonesia/Japan-based ERP",
+      description: "Centralized ERP portal for managing purchases, sales, inventory, costing, and production with QR/Barcode-based handheld device integration for automated GRN generation.",
+      impact: "Streamlined supply chain, reduced manual errors, improved decision-making through structured reporting",
+      techStack: ["C#", "ASP.NET Framework 4.8", "DevExpress XPO", "SQL Server 2019", "Azure DevOps", "Windows Compact OS"],
+    },
+    {
+      name: "Wallcovering Firm Chatbot",
+      subtitle: "USA-based E-commerce AI Assistant",
+      description: "AI-powered chatbot for a USA-based e-commerce platform enabling customers to get product support, place orders, and browse products without manual assistance.",
+      impact: "Improved customer engagement, reduced manual intervention, streamlined buying experience",
+      techStack: ["Copilot Agent", "Power Automate", "ChatGPT API", "Web API"],
+    },
+  ],
+  education: [
+    {
+      degree: "Master of Science in Information Technology",
+      institution: "Ganpat University, Mehsana",
+      period: "2019 – 2021",
+      note: "Gold Medalist | CGPA: 9.0",
+    },
+    {
+      degree: "Bachelor of Science in Information Technology",
+      institution: "Hemchandracharya North Gujarat University, Patan",
+      period: "2016 – 2019",
+      note: "CGPA: 7.7",
+    },
+  ],
+  certifications: [
+    "Microsoft Certified: Azure Fundamentals",
+    "Microsoft Applied Skills: Create and Manage Automated Processes using Power Automate",
+  ],
+  languages: ["English (Professional)", "Hindi (Native)", "Gujarati (Native)"],
+};
