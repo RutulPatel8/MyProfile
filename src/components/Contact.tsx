@@ -15,9 +15,12 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6">
+    <section id="contact" className="py-24 px-4 sm:px-6 bg-card/30">
       <div ref={ref} className="max-w-3xl mx-auto opacity-0 transition-all duration-700 translate-y-8 [&.visible]:opacity-100 [&.visible]:translate-y-0">
-        <SectionHeading label="06" title="Get in Touch" />
+        <SectionHeading title="Get in Touch" />
+        <p className="text-center text-muted-foreground mb-8 -mt-6 text-sm">
+          Have a project in mind or want to collaborate? Let's connect.
+        </p>
         <div className="grid sm:grid-cols-2 gap-4">
           {contacts.map(({ icon: Icon, label, value, href }) => (
             <a
@@ -25,12 +28,14 @@ const Contact = () => {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="bg-card border border-border rounded-xl p-5 flex items-start gap-4 hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 group"
+              className="bg-card border border-border rounded-2xl p-5 flex items-center gap-4 hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5"
             >
-              <Icon className="text-primary shrink-0 mt-0.5 group-hover:scale-110 transition-transform" size={20} />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                <Icon className="text-primary" size={18} />
+              </div>
               <div>
-                <p className="text-xs text-muted-foreground font-mono mb-0.5">{label}</p>
-                <p className="text-sm text-foreground/90">{value}</p>
+                <p className="text-xs text-muted-foreground mb-0.5">{label}</p>
+                <p className="text-sm text-foreground/90 font-medium">{value}</p>
               </div>
             </a>
           ))}
