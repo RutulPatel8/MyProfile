@@ -101,6 +101,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        drift: {
+          "0%, 100%": { transform: "translate3d(0, 0, 0) scale(1)" },
+          "50%": { transform: "translate3d(15px, -25px, 0) scale(1.08)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +114,7 @@ export default {
         blink: "blink 1s step-end infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         float: "float 3s ease-in-out infinite",
+        drift: "drift 8s ease-in-out infinite",
       },
     },
   },
