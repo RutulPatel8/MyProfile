@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";   // ⭐ MUST EXIST
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig(() => ({
   base: "/MyProfile/",
 
   server: {
@@ -12,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     hmr: { overlay: false },
   },
 
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react()],
 
   resolve: {
     alias: {
