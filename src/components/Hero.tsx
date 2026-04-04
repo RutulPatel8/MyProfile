@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { portfolioData } from "@/data/portfolio";
-import { ArrowDown, Linkedin, Mail, Sparkles } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const TypeWriter = ({ text }: { text: string }) => {
   const [displayed, setDisplayed] = useState("");
@@ -19,7 +19,7 @@ const TypeWriter = ({ text }: { text: string }) => {
   return (
     <span className="font-mono">
       {displayed}
-      <span className="ml-1 inline-block h-6 w-0.5 animate-blink align-middle bg-primary" />
+      <span className="inline-block w-0.5 h-6 bg-primary ml-1 animate-blink align-middle" />
     </span>
   );
 };
@@ -28,65 +28,47 @@ const Hero = () => {
   const { name, title, tagline, linkedin, email } = portfolioData.meta;
 
   return (
-    <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-grid">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(190_100%_50%/0.18)_0%,transparent_55%)]" />
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-grid overflow-hidden">
+      {/* Radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(190_100%_50%/0.08)_0%,transparent_70%)]" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 pt-20 text-center sm:px-6">
-        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary opacity-0 animate-fade-up">
-          <Sparkles size={14} />
-          Open to Software Engineering Opportunities
-        </div>
-
-        <p className="mb-4 font-mono text-sm text-primary opacity-0 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <p className="font-mono text-primary text-sm mb-4 opacity-0 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           {"// Hello, I'm"}
         </p>
-        <h1
-          className="mb-4 text-5xl font-bold tracking-tight opacity-0 animate-fade-up sm:text-7xl"
-          style={{ animationDelay: "0.3s" }}
-        >
+        <h1 className="text-5xl sm:text-7xl font-bold mb-4 opacity-0 animate-fade-up tracking-tight" style={{ animationDelay: "0.3s" }}>
           <span className="gradient-text">{name}</span>
         </h1>
-        <p
-          className="mb-6 text-xl text-muted-foreground opacity-0 animate-fade-up sm:text-2xl"
-          style={{ animationDelay: "0.5s" }}
-        >
+        <p className="text-xl sm:text-2xl text-muted-foreground mb-6 opacity-0 animate-fade-up" style={{ animationDelay: "0.5s" }}>
           {title}
         </p>
-
-        <div
-          className="mx-auto mb-10 max-w-2xl rounded-2xl border border-border/70 bg-card/55 px-5 py-4 text-base text-foreground/80 shadow-2xl shadow-black/20 backdrop-blur-xl opacity-0 animate-fade-up sm:text-lg"
-          style={{ animationDelay: "0.7s" }}
-        >
+        <div className="text-base sm:text-lg text-foreground/80 mb-10 max-w-2xl mx-auto opacity-0 animate-fade-up" style={{ animationDelay: "0.7s" }}>
           <TypeWriter text={tagline} />
         </div>
-
-        <div
-          className="flex flex-wrap items-center justify-center gap-4 opacity-0 animate-fade-up"
-          style={{ animationDelay: "0.9s" }}
-        >
+        <div className="flex flex-wrap items-center justify-center gap-4 opacity-0 animate-fade-up" style={{ animationDelay: "0.9s" }}>
           <a
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 hover:-translate-y-0.5"
           >
             <Linkedin size={18} /> LinkedIn
           </a>
           <a
             href={`mailto:${email}`}
-            className="inline-flex items-center gap-2 rounded-xl border border-border bg-background/40 px-6 py-3 text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground hover:border-primary hover:text-primary transition-all duration-300 hover:-translate-y-0.5"
           >
             <Mail size={18} /> Get in Touch
           </a>
         </div>
       </div>
 
-      <a href="#about" className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float text-muted-foreground hover:text-primary transition-colors">
-        <div className="flex flex-col items-center gap-2 text-xs font-mono uppercase tracking-widest">
-          Scroll
-          <ArrowDown size={16} />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/40 flex justify-center pt-2">
+          <div className="w-1 h-2.5 rounded-full bg-primary animate-pulse" />
         </div>
-      </a>
+      </div>
     </section>
   );
 };

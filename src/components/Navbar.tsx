@@ -15,35 +15,32 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed left-0 right-0 top-4 z-50 px-4 sm:px-6">
-      <div
-        className={`mx-auto flex h-16 max-w-6xl items-center justify-between rounded-2xl border px-4 transition-all duration-300 sm:px-6 ${
-          scrolled
-            ? "border-primary/20 bg-background/75 shadow-xl shadow-black/30 backdrop-blur-xl"
-            : "border-border/70 bg-background/45 backdrop-blur-lg"
-        }`}
-      >
-        <a href="#hero" className="font-mono text-lg font-bold tracking-tight text-primary">
-          {"<"}
-          {portfolioData.meta.name.split(" ")[0]}
-          {" />"}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-lg shadow-background/50" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+        <a href="#hero" className="font-mono text-primary font-bold text-lg tracking-tight">
+          {"<"}{portfolioData.meta.name.split(" ")[0]}{" />"}
         </a>
 
-        <div className="hidden items-center gap-7 md:flex">
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="group relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
             >
               {l}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
 
+        {/* Mobile toggle */}
         <button
-          className="text-muted-foreground transition-colors hover:text-primary md:hidden"
+          className="md:hidden text-muted-foreground hover:text-primary transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -51,14 +48,15 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-border/70 bg-background/90 px-6 py-4 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border">
+          <div className="flex flex-col px-6 py-4 gap-4">
             {navLinks.map((l) => (
               <a
                 key={l}
                 href={`#${l.toLowerCase()}`}
-                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {l}
