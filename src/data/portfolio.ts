@@ -89,6 +89,13 @@ export const portfolioData = {
       impact: "Improved customer engagement, reduced manual intervention, streamlined buying experience",
       techStack: ["Copilot Agent", "Power Automate", "ChatGPT API", "Web API"],
     },
+    {
+      name: "Sandata",
+      subtitle: "Healthcare Payer/Provider Portal",
+      description: "Built and maintained a healthcare portal where payers request services and providers deliver them, with HIPAA-compliant patient data handling, report generation, and incremental/normal patient file upload workflows.",
+      impact: "Improved service coordination between payers and providers while ensuring compliant patient data processing and reliable reporting.",
+      techStack: [".NET", "MS SQL Server", "DynamoDB", "AWS SQS", "AWS Lambda"],
+    },
   ],
   education: [
     {
