@@ -96,6 +96,13 @@ export const portfolioData = {
       impact: "Improved service coordination between payers and providers while ensuring compliant patient data processing and reliable reporting.",
       techStack: [".NET", "MS SQL Server", "DynamoDB", "AWS SQS", "AWS Lambda"],
     },
+    {
+      name: "AI Risk Management System",
+      subtitle: "Enterprise Legacy Modernization",
+      description: "Migrated a large enterprise risk management platform with 217 legacy projects to .NET Core (initially .NET 6, then aligned to .NET 8) with MS SQL and EF-based data access modernization.",
+      impact: "Converted critical WCF components to HTTP services, removed complex locking logic, and enabled concurrent multi-request processing to reduce user wait time and improve system throughput.",
+      techStack: [".NET Core 8", ".NET 6 Migration", "C#", "MS SQL Server", "Entity Framework", "HTTP Services", "Legacy Modernization"],
+    },
   ],
   education: [
     {
